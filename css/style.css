@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 #site {
@@ -16,7 +17,6 @@ body {
     "six six"
     "footer footer";
   height: 100vh;
-  color: white;
 }
 
 .un {
@@ -70,7 +70,7 @@ body {
   height: 200px;
 }
 
-#grille1 {
+.grille1 {
   display: grid;
   grid-template-columns: repeat(
     3,
@@ -148,7 +148,14 @@ body {
   background-color: purple;
   grid-area: cinq;
 }
+.cinq-content {
+  margin: auto;
+  width: 1000px;
+}
 
+.cinq img {
+  width: 300px;
+}
 .six {
   background-color: greenyellow;
   grid-area: six;
@@ -161,6 +168,7 @@ body {
 .appareils {
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 .six img {
   width: 200px;
