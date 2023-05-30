@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#site {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "un un"
+    "deux deux"
+    "trois trois"
+    "quatre quatre"
+    "cinq cinq"
+    "six six"
+    "footer footer";
+  height: 100vh;
+  color: white;
+}
+
+.un {
+  background-color: pink;
+  grid-area: un;
+  background-image: url(/assets/img/background.jpeg);
+}
+.un_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.prix-bouttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.prix-bouttons-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.deux {
+  background-color: orange;
+  grid-area: deux;
+  margin: auto;
+}
+
+.deux-content {
+  display: flex;
+  width: 800px;
+  margin: auto;
+}
+
+.deux img {
+  width: 300px;
+  height: 200px;
+}
+
+.trois {
+  background-color: yellowgreen;
+  grid-area: trois;
+}
+.trois-content {
+  display: flex;
+  width: 800px;
+  margin: auto;
+}
+.trois img {
+  width: 300px;
+  height: 200px;
+}
+
+#grille1 {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(200px, 1fr)
+  ); /* Adjust the column size as needed */
+  grid-template-rows: repeat(
+    3,
+    minmax(200px, 1fr)
+  ); /* Adjust the row size as needed */
+  gap: 10px; /* Adjust the gap between images as needed */
+  grid-template-areas:
+    "img-grille1 img-grille2 img-grille3"
+    "img-grille4 img-grille5 img-grille6"
+    "img-grille7 img-grille8 img-grille9";
+}
+
+.img-grille1 {
+  grid-area: img-grille1;
+  width: 100%;
+  height: 100%;
+}
+.img-grille2 {
+  grid-area: img-grille2;
+  width: 100%;
+  height: 100%;
+}
+.img-grille3 {
+  grid-area: img-grille3;
+  width: 100%;
+  height: 100%;
+}
+.img-grille4 {
+  grid-area: img-grille4;
+  width: 100%;
+  height: 100%;
+}
+.img-grille5 {
+  grid-area: img-grille5;
+  width: 100%;
+  height: 100%;
+}
+.img-grille6 {
+  grid-area: img-grille6;
+  width: 100%;
+  height: 100%;
+}
+.img-grille7 {
+  grid-area: img-grille7;
+  width: 100%;
+  height: 100%;
+}
+.img-grille8 {
+  grid-area: img-grille8;
+  width: 100%;
+  height: 100%;
+}
+.img-grille9 {
+  grid-area: img-grille9;
+  width: 100%;
+  height: 100%;
+}
+.quatre {
+  background-color: cyan;
+  grid-area: quatre;
+}
+.quatre-content {
+  margin: auto;
+  width: 1000px;
+}
+
+.quatre img {
+  width: 300px;
+}
+.cinq {
+  background-color: purple;
+  grid-area: cinq;
+}
+
+.six {
+  background-color: greenyellow;
+  grid-area: six;
+}
+.six-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.appareils {
+  margin: auto;
+  display: flex;
+}
+.six img {
+  width: 200px;
+}
+.icon {
+  background-color: red;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: gray;
+}
