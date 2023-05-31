@@ -7,7 +7,7 @@ body {
 #site {
   display: grid;
   grid-template-columns: 2fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 2fr 2fr 1fr 3fr 3fr 2fr 1fr;
   grid-template-areas:
     "un un"
     "deux deux"
@@ -42,7 +42,7 @@ body {
 .deux {
   background-color: orange;
   grid-area: deux;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .deux-content {
@@ -59,6 +59,7 @@ body {
 .trois {
   background-color: yellowgreen;
   grid-area: trois;
+  /* margin: auto; */
 }
 .trois-content {
   display: flex;
