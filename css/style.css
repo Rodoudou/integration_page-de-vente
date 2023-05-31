@@ -73,66 +73,20 @@ body {
 
 .grille1 {
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    minmax(200px, 1fr)
-  ); /* Adjust the column size as needed */
-  grid-template-rows: repeat(
-    3,
-    minmax(200px, 1fr)
-  ); /* Adjust the row size as needed */
-  gap: 10px; /* Adjust the gap between images as needed */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 5px; /* Adjust the gap between images as needed */
   grid-template-areas:
     "img-grille1 img-grille2 img-grille3"
     "img-grille4 img-grille5 img-grille6"
     "img-grille7 img-grille8 img-grille9";
 }
+.grille1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-.img-grille1 {
-  grid-area: img-grille1;
-  width: 100%;
-  height: 100%;
-}
-.img-grille2 {
-  grid-area: img-grille2;
-  width: 100%;
-  height: 100%;
-}
-.img-grille3 {
-  grid-area: img-grille3;
-  width: 100%;
-  height: 100%;
-}
-.img-grille4 {
-  grid-area: img-grille4;
-  width: 100%;
-  height: 100%;
-}
-.img-grille5 {
-  grid-area: img-grille5;
-  width: 100%;
-  height: 100%;
-}
-.img-grille6 {
-  grid-area: img-grille6;
-  width: 100%;
-  height: 100%;
-}
-.img-grille7 {
-  grid-area: img-grille7;
-  width: 100%;
-  height: 100%;
-}
-.img-grille8 {
-  grid-area: img-grille8;
-  width: 100%;
-  height: 100%;
-}
-.img-grille9 {
-  grid-area: img-grille9;
-  width: 100%;
-  height: 100%;
-}
 .quatre {
   background-color: cyan;
   grid-area: quatre;
@@ -140,6 +94,7 @@ body {
 .quatre-content {
   margin: auto;
   width: 1000px;
+  text-align: center;
 }
 
 .quatre img {
@@ -152,6 +107,7 @@ body {
 .cinq-content {
   margin: auto;
   width: 1000px;
+  text-align: center;
 }
 
 .cinq img {
@@ -197,4 +153,35 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0px 44px 0px 44px;
+  background: #0063e5;
+  border: none;
+  color: #f9f9f9;
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  vertical-align: middle;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  height: 50px;
+}
+
+.container-img {
+  width: 100%;
+}
+
+.container-img {
+  max-width: 100%;
+  height: auto;
 }
