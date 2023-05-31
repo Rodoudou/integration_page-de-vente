@@ -187,3 +187,14 @@ footer {
   grid-area: footer;
   background-color: gray;
 }
+
+.footer-content {
+  text-align: center;
+  margin: auto;
+}
+
+.footer-liste ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
