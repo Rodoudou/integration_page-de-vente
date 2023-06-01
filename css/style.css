@@ -1,13 +1,28 @@
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
-  color: white;
+  color: silver;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  /* background-color: #040714; */
+}
+
+h1,
+h2 {
+  color: #f9f9f9;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+h1 {
+  font-size: clamp(24px, 10vw, 48px);
 }
 
 #site {
   display: grid;
   grid-template-columns: 2fr;
-  grid-template-rows: 2fr 2fr 1fr 3fr 3fr 2fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr 4fr 4fr 2fr 1fr;
   grid-template-areas:
     "un un"
     "deux deux"
@@ -16,7 +31,12 @@ body {
     "cinq cinq"
     "six six"
     "footer footer";
-  height: 100vh;
+  max-width: 100%;
+  height: auto;
+}
+#site {
+  max-width: 100%;
+  height: auto;
 }
 
 .un {
@@ -42,40 +62,56 @@ body {
 .deux {
   background-color: orange;
   grid-area: deux;
-  /* margin: auto; */
+  display: flex;
+  justify-content: center;
 }
 
 .deux-content {
   display: flex;
-  width: 800px;
+  align-items: flex-end;
+
   margin: auto;
 }
 
+.deux-content:nth-child(1) {
+  width: 800px;
+}
 .deux img {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .trois {
   background-color: yellowgreen;
   grid-area: trois;
-  /* margin: auto; */
+  display: flex;
+  justify-content: center;
 }
 .trois-content {
   display: flex;
-  width: 800px;
+  align-items: flex-end;
+  width: 100%;
   margin: auto;
 }
+.trois-content:nth-child(1) {
+  width: 800px;
+}
+
+.trois li {
+  list-style: none;
+}
 .trois img {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .grille1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 2fr));
-  gap: 20px;
+  gap: 10px;
+
   margin-bottom: 20px;
   grid-template-areas:
     "img-grille1 img-grille2 img-grille3"
@@ -83,8 +119,8 @@ body {
     "img-grille7 img-grille8 img-grille9";
 }
 .grille1 img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -94,7 +130,7 @@ body {
 }
 .quatre-content {
   margin: auto;
-  width: 920px;
+  width: 100%;
   text-align: center;
 }
 
@@ -107,7 +143,7 @@ body {
 }
 .cinq-content {
   margin: auto;
-  width: 920px;
+  width: 100%;
   text-align: center;
 }
 
@@ -126,10 +162,12 @@ body {
 .appareils {
   margin: auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .six img {
   width: 200px;
+  object-fit: cover;
 }
 .icon {
   background-color: red;
@@ -155,7 +193,9 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
+.logo2 img {
+  width: 80px;
+}
 .btn {
   padding: 0px 44px 0px 44px;
   background: #0063e5;
@@ -187,7 +227,7 @@ footer {
   height: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 930px) {
   .un {
     text-align: center;
   }
@@ -205,25 +245,38 @@ footer {
     flex-direction: column-reverse;
     width: 100%;
     margin: auto;
+
+    align-items: center;
   }
 
-  .trois-content {
-    width: 100%;
-  }
   .trois {
     text-align: center;
   }
   .trois-content {
     flex-direction: column;
     margin: auto;
+    width: 100%;
+    align-items: center;
   }
 
+  .six-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .appareils {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .six img {
+    width: 200px;
+  }
   .grille1 {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(4, minmax(0, 1fr));
-    grid-column-gap: 10px;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 5px;
     margin-bottom: 20px;
 
     grid-template-areas:
