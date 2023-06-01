@@ -16,9 +16,16 @@ h2 {
   letter-spacing: normal;
 }
 h1 {
-  font-size: clamp(24px, 10vw, 48px);
+  font-size: clamp(24px, 10vw, 44px);
 }
-
+h2 {
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+  color: #c0c0c0;
+  font-family: sans-serif;
+}
 #site {
   display: grid;
   grid-template-columns: 2fr;
@@ -38,15 +45,23 @@ h1 {
   max-width: 100%;
   height: auto;
 }
+.resilliation p {
+  font-size: 12px;
+}
 
 .un {
   background-color: pink;
   grid-area: un;
   background-image: url(/assets/img/background.jpeg);
+  display: flex;
+  align-items: center;
 }
 .un_content {
   display: flex;
   flex-direction: column;
+}
+.un .logo1 img {
+  width: 80px;
 }
 
 .prix-bouttons {
@@ -230,6 +245,9 @@ footer {
 @media only screen and (max-width: 930px) {
   .un {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .prix-bouttons {
@@ -259,6 +277,17 @@ footer {
     align-items: center;
   }
 
+  .quatre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cinq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .six-content {
     display: flex;
     flex-direction: column;
