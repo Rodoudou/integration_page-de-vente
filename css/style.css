@@ -29,8 +29,9 @@ p {
 #site {
   display: grid;
   grid-template-columns: 2fr;
-  grid-template-rows: 2fr 2fr 2fr 4fr 4fr 2fr 1fr;
+  grid-template-rows: 70px 2fr 2fr 2fr 4fr 4fr 2fr 1fr;
   grid-template-areas:
+    "nav nav"
     "un un"
     "deux deux"
     "trois trois"
@@ -46,6 +47,68 @@ p {
   font-size: 12px;
 }
 
+nav {
+  grid-area: nav;
+  background-color: #040714;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  padding-right: 70px;
+}
+nav a {
+  display: flex;
+  justify-items: center;
+  text-decoration: none;
+}
+
+nav ul li:nth-child(1) {
+  background: #0063e5;
+  border: none;
+  color: #f9f9f9;
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  vertical-align: middle;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 130px;
+  height: 50px;
+}
+
+nav ul li:nth-child(2) {
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  border: 1px solid silver;
+  color: #f9f9f9;
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  vertical-align: middle;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 130px;
+  height: 50px;
+  margin-left: 5px;
+  transition: all 0.2s ease 0s;
+}
+
+nav li {
+  padding-right: 10px;
+}
 .un {
   background-color: pink;
   grid-area: un;
