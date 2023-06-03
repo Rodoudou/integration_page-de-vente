@@ -15,7 +15,7 @@
   </head>
   <body>
     <div id="site">
-      <nav>
+      <nav class="sticky-nav">
         <ul>
           <li><a href="#" type="button">S'INSCRIRE</a></li>
           <li><a href="#" type="button">S'IDENTIFIER</a></li>
@@ -253,7 +253,6 @@
           </div>
         </div>
       </div>
-
       <footer>
         <div class="footer">
           <div class="footer-content">
@@ -262,17 +261,26 @@
             </div>
             <div class="footer-liste">
               <ul>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
-                <li>Lorem ipsum dolor</li>
+                <li>
+                  <span class="language-selector">
+                    <label for="language-selector"> </label>
+                    <select id="language-selector" class="fine">
+                      <option value="/en-fr/">English</option>
+                      <option selected="" value="/fr-fr/">Français</option>
+                    </select>
+                  </span>
+                </li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
               </ul>
             </div>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -281,4 +289,5 @@
       </footer>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

@@ -29,9 +29,8 @@ p {
 #site {
   display: grid;
   grid-template-columns: 2fr;
-  grid-template-rows: 70px 2fr 2fr 2fr 4fr 4fr 2fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr 4fr 4fr 2fr 1fr;
   grid-template-areas:
-    "nav nav"
     "un un"
     "deux deux"
     "trois trois"
@@ -48,16 +47,31 @@ p {
 }
 
 nav {
-  grid-area: nav;
   background-color: #040714;
-  width: 100%;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  transition: top 0.3s ease-in-out;
+}
+.sticky-nav.visible {
+  top: 0;
 }
 nav ul {
   display: flex;
   padding-right: 70px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.sticky-nav li {
+  display: inline-block;
+  margin: 0 10px;
 }
 nav a {
   display: flex;
@@ -110,7 +124,6 @@ nav li {
   padding-right: 10px;
 }
 .un {
-  background-color: pink;
   grid-area: un;
   background-image: url(/assets/img/background.jpeg);
   display: flex;
@@ -162,12 +175,12 @@ nav li {
   grid-area: deux;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .deux-content {
   display: flex;
   align-items: flex-end;
-
   margin: auto;
 }
 
@@ -185,6 +198,7 @@ nav li {
   grid-area: trois;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .trois-content {
   display: flex;
@@ -225,6 +239,9 @@ nav li {
 .quatre {
   background-color: cyan;
   grid-area: quatre;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .quatre-content {
   margin: auto;
@@ -238,6 +255,9 @@ nav li {
 .cinq {
   background-color: purple;
   grid-area: cinq;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cinq-content {
   margin: auto;
@@ -251,6 +271,9 @@ nav li {
 .six {
   background-color: greenyellow;
   grid-area: six;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .six-content {
   display: flex;
@@ -278,18 +301,37 @@ nav li {
 
 footer {
   grid-area: footer;
-  background-color: gray;
+  background-color: #040714;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-content {
   text-align: center;
   margin: auto;
+  font-size: 12px;
+}
+.footer-content p {
+  font-size: 12px;
 }
 
 .footer-liste ul {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+footer li {
+  list-style: none;
+  margin-right: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: #c0c0c0;
+}
+footer a:hover {
+  color: white;
 }
 .logo2 img {
   width: 80px;
