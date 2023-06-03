@@ -223,8 +223,8 @@ nav li {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-
   margin: 200px 0px;
+  width: 1000px;
   grid-template-areas:
     "img-grille1 img-grille2 img-grille3"
     "img-grille4 img-grille5 img-grille6"
@@ -247,6 +247,9 @@ nav li {
   margin: auto;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .quatre img {
@@ -263,6 +266,9 @@ nav li {
   margin: auto;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cinq img {
@@ -317,12 +323,17 @@ footer {
   font-size: 12px;
 }
 
-.footer-liste ul {
+footer ul {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 20px;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0 auto 15px;
+  padding: 0;
+  position: relative;
+  text-indent: none;
 }
-
 footer li {
   list-style: none;
   margin-right: 10px;
@@ -368,7 +379,7 @@ footer a:hover {
   height: auto;
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 730px) {
   .un {
     text-align: center;
     display: flex;
@@ -432,7 +443,8 @@ footer a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 5px;
-    margin-bottom: 20px;
+    margin: 0 20px 20px 20px;
+    width: auto;
 
     grid-template-areas:
       "img-grille1 img-grille2"
@@ -446,5 +458,12 @@ footer a:hover {
     grid-area: img-grille9;
     justify-self: center;
     align-self: end;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .fine {
+    font-size: 12px;
+    line-height: 22px;
   }
 }
