@@ -1,44 +1,193 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #040714;
-  color: white;
+}
+h1 {
+  margin: 40px 0;
 }
 
-.contenu {
-  display: flex;
+.formulaire {
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  margin: auto; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    "un un"
+    "deux deux"
+    "trois trois"
+    "quatre quatre"
+    "cinq cinq"
+    "six six"
+    "sept sept";
+
+  background-color: #040714;
+  color: white;
+  width: 1000px;
+  height: 900px;
+}
+
+.formulaire input {
+  margin: 40px 0;
 }
 .logo img {
   width: 80px;
 }
+.contenu {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
 
-.select {
+.un {
+  grid-area: un;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.deux {
+  grid-area: deux;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.options {
+.trois {
+  grid-area: trois;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-evenly;
 }
-.checkbox-options {
+.trois :nth-child(2) {
+  margin: 0 0 30px 0;
+}
+
+.quatre {
+  grid-area: quatre;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+.quatre :nth-child(1) {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+.quatre :nth-child(2) {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+.cinq {
+  grid-area: cinq;
+  margin: auto;
   display: flex;
   flex-direction: column;
 }
 
-.radio-options {
-  display: flex;
-  flex-direction: column;
+.six {
+  grid-area: six;
 }
 
-.zone-message {
-  display: flex;
-  flex-direction: column;
+.sept {
+  grid-area: sept;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"]:checked + .slider {
+  background-color: #2196f3;
+}
+
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Barre de progression ajustable */
+.measure-bar {
+  width: 400px;
+  height: 10px;
+  background-color: #eaeaea;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.measure-slider {
+  width: 20px;
+  height: 30px;
+  background-color: #42b983;
+  border-radius: 50%;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.measure-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #42b983;
+  border-radius: 50%;
+}
+
+.measure-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #42b983;
+  border-radius: 50%;
+}
+
+.measure-slider::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #42b983;
+  border-radius: 50%;
 }

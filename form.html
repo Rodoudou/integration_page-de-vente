@@ -15,7 +15,7 @@
       </div>
       <h1>LE FORMULAIRE</h1>
       <div class="formulaire">
-        <div>
+        <div class="un">
           <input
             type="text"
             name="nom"
@@ -31,7 +31,7 @@
             placeholder="Redouane"
           />
         </div>
-        <div>
+        <div class="deux">
           <input type="date" />
           <input
             type="email"
@@ -41,7 +41,7 @@
             placeholder="john.doe@gmail.com"
           />
         </div>
-        <div>
+        <div class="trois">
           <div class="select">
             <label class="select-choice" for="pet-select">Choose a pet:</label>
 
@@ -54,20 +54,20 @@
               <option value="spider">Spider</option>
               <option value="goldfish">Goldfish</option>
             </select>
-            <div>
-              <label for="tentacles">Choisi le nombrte de places</label>
+          </div>
+          <div>
+            <label for="tentacles">Choisi le nombrte de places</label>
 
-              <input
-                type="number"
-                id="tentacles"
-                name="tentacles"
-                min="10"
-                max="100"
-              />
-            </div>
+            <input
+              type="number"
+              id="tentacles"
+              name="tentacles"
+              min="10"
+              max="100"
+            />
           </div>
         </div>
-        <div class="options">
+        <div class="options quatre">
           <div class="checkbox-options">
             <label>
               <input type="checkbox" name="choix" value="valeur1" />
@@ -99,14 +99,28 @@
             </label>
           </div>
         </div>
-        <div class="zone-message">
+        <div class="zone-message cinq">
           <label for="story">Tell us your story:</label>
 
-          <textarea id="story" name="story" rows="5" cols="33">
-            It was a dark and stormy night...
-          </textarea>
+          <textarea id="story" name="story" rows="5" cols="33"> </textarea>
+        </div>
+        <div class="switch six">
+          <label>
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="measure-bar sept">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="measure-slider"
+          />
         </div>
       </div>
     </div>
   </body>
+  <script src="form.js"></script>
 </html>
