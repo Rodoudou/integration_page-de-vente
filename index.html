@@ -9,6 +9,12 @@
       href="/assets/img/favicon.ico"
       type="image/x-icon"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Disney</title>
@@ -21,7 +27,10 @@
           <li><a href="#" type="button">S'IDENTIFIER</a></li>
         </ul>
       </nav>
-      <div class="un">
+      <div class="un current-section" id="section-un ">
+        <div class="scroll-arrow-down">
+          <i class="fas fa-arrow-down"></i>
+        </div>
         <div class="un_content">
           <div class="logo1">
             <img src="/assets/img/logo.png" alt="logo" />
@@ -255,7 +264,11 @@
           </div>
         </div>
       </div>
-      <footer>
+
+      <footer id="section-sept" class="current-section-footer">
+        <div class="scroll-arrow-up">
+          <i class="fas fa-arrow-up"></i>
+        </div>
         <div class="footer">
           <div class="footer-content">
             <div class="logo2">
@@ -297,6 +310,6 @@
         </div>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

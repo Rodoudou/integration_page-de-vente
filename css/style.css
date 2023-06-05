@@ -46,6 +46,43 @@ p {
   font-size: 12px;
 }
 
+/* SCROLL  */
+.scroll-arrow-up {
+  position: fixed;
+  bottom: 90px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* SCROLL  */
+.scroll-arrow-down {
+  position: fixed;
+  top: 500px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.scroll-arrow-down.show,
+.scroll-arrow-up.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 nav {
   background-color: #040714;
   display: flex;
@@ -128,8 +165,7 @@ nav li {
   grid-area: un;
   background-image: url(/assets/img/background.jpeg);
   display: flex;
-  justify-content: center;
-  align-items: center;
+
   padding-left: 40px;
 }
 
