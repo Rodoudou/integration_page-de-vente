@@ -447,9 +447,27 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 730px) {
+  #site {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr 2fr 1fr 1fr;
+    grid-template-areas:
+      "un"
+      "deux "
+      "trois "
+      "quatre"
+      "cinq "
+      "six "
+      "footer ";
+    max-width: 100%;
+    height: auto;
+  }
   .un {
     text-align: center;
-    padding-left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .prix-bouttons {
