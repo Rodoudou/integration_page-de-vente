@@ -17,107 +17,132 @@
       <div class="formulaire">
         <div class="un">
           <input
+            autofocus
             type="text"
             name="nom"
             id="nom"
             value=""
-            placeholder="AMRANI"
+            placeholder="Nom"
           />
           <input
             type="text"
             name="prenom"
             id="prenom"
             value=""
-            placeholder="Redouane"
+            placeholder="Prénom"
           />
         </div>
         <div class="deux">
-          <input type="date" />
+          <input class="date" type="date" />
           <input
             type="email"
             name="email"
             id="email"
             value=""
-            placeholder="john.doe@gmail.com"
+            placeholder="covid19-dans_ton_cul@gmail.com"
           />
         </div>
         <div class="trois">
           <div class="select">
-            <label class="select-choice" for="pet-select">Choose a pet:</label>
+            <label class="select-choice" for="pet-select"
+              >Choisis une discipline:</label
+            >
 
             <select name="pets" id="pet-select">
-              <option value="">--Please choose an option--</option>
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-              <option value="hamster">Hamster</option>
-              <option value="parrot">Parrot</option>
-              <option value="spider">Spider</option>
-              <option value="goldfish">Goldfish</option>
+              <option value="">--Disciplines--</option>
+              <option value="dog">Judo</option>
+              <option value="cat">JJB</option>
+              <option value="hamster">Boxe Thaï</option>
             </select>
           </div>
           <div>
-            <label for="tentacles">Choisi le nombrte de places</label>
+            <label for="tentacles">Choisi le nombre de places</label>
 
             <input
               type="number"
               id="tentacles"
               name="tentacles"
-              min="10"
-              max="100"
+              min="1"
+              max="10"
+              value="1"
             />
           </div>
         </div>
         <div class="options quatre">
           <div class="checkbox-options">
-            <label>
-              <input type="checkbox" name="choix" value="valeur1" />
-              Option 1
-            </label>
+            <div>
+              <label for="choix1" class="checkbox">
+                <input
+                  type="checkbox"
+                  name="choix"
+                  value="valeur1"
+                  id="choix1"
+                />
+              </label>
+              <span> Judo/JJB</span>
+            </div>
 
-            <label>
-              <input type="checkbox" name="choix" value="valeur2" />
-              Option 2
-            </label>
-            <label>
-              <input type="checkbox" name="choix" value="valeur3" />
-              Option 3
-            </label>
+            <div>
+              <label for="choix2" class="checkbox">
+                <input
+                  type="checkbox"
+                  name="choix"
+                  value="valeur2"
+                  id="choix2"
+                />
+              </label>
+              <span> MMA</span>
+            </div>
+            <div>
+              <label for="choix3" class="checkbox">
+                <input
+                  type="checkbox"
+                  name="choix"
+                  value="valeur3"
+                  id="choix3"
+                />
+              </label>
+              <span>Boxe Thaï</span>
+            </div>
           </div>
           <div class="radio-options">
-            <label>
-              <input type="radio" name="choix" value="valeur1" />
-              Option 1
-            </label>
+            <div>
+              <label>
+                <input
+                  class="radio"
+                  type="radio"
+                  name="choix"
+                  value="valeur1"
+                />
+              </label>
+              <span>Tarif réduit</span>
+            </div>
+            <div>
+              <label class="radio">
+                <input type="radio" name="choix" value="valeur2" />
+              </label>
+              <span>Tarif normal</span>
+            </div>
 
-            <label>
-              <input type="radio" name="choix" value="valeur2" />
-              Option 2
-            </label>
-            <label>
-              <input type="radio" name="choix" value="valeur3" />
-              Option 3
-            </label>
+            <div>
+              <label class="radio">
+                <input type="radio" name="choix" value="valeur3" />
+              </label>
+              <span> Tarif vip</span>
+            </div>
           </div>
         </div>
+
         <div class="zone-message cinq">
-          <label for="story">Tell us your story:</label>
+          <label for="story">Un message pour nous :</label>
 
           <textarea id="story" name="story" rows="5" cols="33"> </textarea>
         </div>
         <div class="switch six">
           <label>
-            <input type="checkbox" />
+            <input style="appearance: none" type="checkbox" />
             <span class="slider"></span>
           </label>
-        </div>
-        <div class="measure-bar sept">
-          <input
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            class="measure-slider"
-          />
         </div>
       </div>
     </div>
