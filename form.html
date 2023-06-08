@@ -14,7 +14,7 @@
         <img src="/assets/img/logo.png" alt="" />
       </div>
       <h1>LE FORMULAIRE</h1>
-      <div class="formulaire">
+      <form id="formulaire" class="formulaire">
         <div class="un">
           <input
             autofocus
@@ -93,6 +93,7 @@
               </label>
               <span> MMA</span>
             </div>
+
             <div>
               <label for="choix3" class="checkbox">
                 <input
@@ -105,6 +106,7 @@
               <span>Boxe Thaï</span>
             </div>
           </div>
+
           <div class="radio-options">
             <div>
               <label>
@@ -138,13 +140,16 @@
 
           <textarea id="story" name="story" rows="5" cols="33"> </textarea>
         </div>
-        <div class="switch six">
-          <label>
-            <input style="appearance: none" type="checkbox" />
-            <span class="slider"></span>
-          </label>
+        <div class="switch-btn-content six">
+          <div class="switch">
+            <label>
+              <input style="appearance: none" type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <button type="submit">Envoyer</button>
         </div>
-      </div>
+      </form>
     </div>
   </body>
   <script src="form.js"></script>
